@@ -1,0 +1,33 @@
+{
+  "name": "json-logic-js-graphql",
+  "version": "1.0.0",
+  "description": "Graphql query support for json-logic-js",
+  "main": "logic.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msroot/json-logic-js-graphql.git"
+  },
+  "keywords": [
+    "json",
+    "logic",
+    "jsonlogic",
+    "rules",
+    "graphql"
+  ],
+  "author": "Ioannis Kolovos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/msroot/json-logic-js-graphql/issues"
+  },
+  "homepage": "https://github.com/msroot/json-logic-js-graphql#readme",
+  "dependencies": {
+    "json-logic-js": "^2.0.1",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "jest": "^27.0.4"
+  }
+}
