@@ -23,6 +23,34 @@ This package adds support to [json-logic-js](https://github.com/jwadhams/json-lo
 | substract 	| - 	|
 | divide 	| / 	|
 
+## List Operators 
+
+List all available operators: 
+
+```js
+const jsonLogic = require('json-logic-js-graphql')
+jsonLogic.list_operators()
+```
+
+## GraphQL 
+
+The `rule` can be a jsonlogic object
+
+```graphql
+mutation {
+  updateResource(
+    id: "609ce9dbec9fb60004087784"
+    rule: { strictEqual: [{ var: "foo" }, "bar"] }
+  ) {
+    id
+  }
+}
+
+```
+
+## Tests
+
+Install dependencies with `yarn install` and then run the tests `yarn test`
 
 ## Contributing
 
