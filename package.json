@@ -1,10 +1,10 @@
 {
   "name": "json-logic-js-graphql",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Graphql query support for json-logic-js",
   "main": "logic.js",
   "scripts": {
-    "test": "jest"
+    "test": "qunit"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,6 @@
     "moment": "^2.29.1"
   },
   "devDependencies": {
-    "jest": "^27.0.4"
+    "qunit": "^2.16.0"
   }
 }
