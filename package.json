@@ -17,14 +17,13 @@
     "rules",
     "graphql"
   ],
-  "author": "Ioannis Kolovos",
+  "author": "msroot",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/msroot/json-logic-js-graphql/issues"
   },
   "homepage": "https://github.com/msroot/json-logic-js-graphql#readme",
   "dependencies": {
-    "json-logic-js": "^2.0.1",
     "moment": "^2.29.1"
   },
   "devDependencies": {
