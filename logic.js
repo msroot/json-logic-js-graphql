@@ -17,9 +17,7 @@ http://ricostacruz.com/cheatsheets/umdjs.html
 })(this, function () {
   "use strict";
   /* globals console:false */
-
   var moment = require("moment");
-
   if (!Array.isArray) {
     Array.isArray = function (arg) {
       return Object.prototype.toString.call(arg) === "[object Array]";
@@ -134,9 +132,6 @@ http://ricostacruz.com/cheatsheets/umdjs.html
         []
       );
     },
-    dateGreaterOrEqual: function (a, b) {
-      return moment(a[1]).diff(a[0], b[1]) >= b[0];
-    },
     var: function (a, b) {
       var not_found = b === undefined ? null : b;
       var data = this;
@@ -186,6 +181,9 @@ http://ricostacruz.com/cheatsheets/umdjs.html
       } else {
         return are_missing;
       }
+    },
+    dateGreaterOrEqual: function (a, b) {
+      return moment(a[1]).diff(a[0], b[1]) >= b[0];
     },
   };
 
@@ -382,16 +380,14 @@ http://ricostacruz.com/cheatsheets/umdjs.html
     // The operation is called with "data" bound to its "this" and "values" passed as arguments.
     // Structured commands like % or > can name formal arguments while flexible commands (like missing or merge) can operate on the pseudo-array arguments
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
-    if (typeof operations[op] === "function") {
+    if (operations.hasOwnProperty(op) && typeof operations[op] === "function") {
       return operations[op].apply(data, values);
     } else if (op.indexOf(".") > 0) {
       // Contains a dot, and not in the 0th position
       var sub_ops = String(op).split(".");
       var operation = operations;
       for (i = 0; i < sub_ops.length; i++) {
-        // Descending into operations
-        operation = operation[sub_ops[i]];
-        if (operation === undefined) {
+        if (!operation.hasOwnProperty(sub_ops[i])) {
           throw new Error(
             "Unrecognized operation " +
               op +
@@ -400,6 +396,8 @@ http://ricostacruz.com/cheatsheets/umdjs.html
               ")"
           );
         }
+        // Descending into operations
+        operation = operation[sub_ops[i]];
       }
 
       return operation.apply(data, values);
