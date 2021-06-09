@@ -1,7 +1,6 @@
 # json-logic-js-graphql
 
-
-This package adds support to [json-logic-js](https://github.com/jwadhams/json-logic-js) for GraphQL Query variable operators like `>` `===` and more
+[json-logic-js](https://github.com/jwadhams/json-logic-js) support for GraphQL Query keys like `>` `===` and more
 
 ## Operation Alias:
 
