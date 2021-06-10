@@ -23,6 +23,21 @@ $ yarn add json-logic-js-graphql
 $ npm install json-logic-js-graphql --save
 ```
 
+
+# Usage
+ 
+```javascript
+
+	import { jsonLogic } from "json-logic-js-graphql";
+
+	const rules = {
+	  _eq: [{ var: "foo" }, { var: "bar" }],
+	};
+	const data = { foo: "bar", bar: "bar" };
+
+	jsonLogic.apply(rules, data);
+ 
+```
  
 ## GraphQL 
 
