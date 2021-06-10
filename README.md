@@ -28,14 +28,14 @@ $ npm install json-logic-js-graphql --save
  
 ```javascript
 
-	import { jsonLogic } from "json-logic-js-graphql";
+import { jsonLogic } from 'json-logic-js-graphql'
 
-	const rules = {
-	  _eq: [{ var: "foo" }, { var: "bar" }],
-	};
-	const data = { foo: "bar", bar: "bar" };
+const rules = {
+  _eq: [{ var: 'foo' }, { var: 'bar' }],
+}
+const data = { foo: 'bar', bar: 'bar' }
 
-	jsonLogic.apply(rules, data);
+jsonLogic.apply(rules, data)
  
 ```
  
@@ -65,15 +65,16 @@ mutation {
 example: 
 
 ```javascript
-   const rules = {
-        _gteDate: [
-          [{ var: 'from' }, { var: 'to' }],
-          [364, 'days'],
-        ],
-      }
-      const data = { from: '2020-10-01', to: '2021-10-01' }
+const rules = {
+  _gteDate: [
+    [{ var: 'from' }, { var: 'to' }],
+    [364, 'days'],
+  ],
+}
+const data = { from: '2020-10-01', to: '2021-10-01' }
 
-      jsonLogic.apply(rules, data)
+jsonLogic.apply(rules, data)
+
 ```
 
 ## Supported Lodash functions:
