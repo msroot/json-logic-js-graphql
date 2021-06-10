@@ -4,7 +4,7 @@
 [![NPM](https://nodei.co/npm/json-logic-js-graphql.png?downloads=true)](https://nodei.co/npm/json-logic-js-graphql/)
 
 
-Exposes immutable useful functions from [Lodash](https://github.com/lodash/lodash) to [jsonLogic](https://github.com/jwadhams/json-logic-js)
+Exposes immutable useful functions from [Lodash](https://lodash.com/docs/) to [jsonLogic](https://github.com/jwadhams/json-logic-js)
 
 ## The Problem 
 Unsupported GraphQL keys: `==`, `===`, `!=`, `!==`, `>`, `>=`, ` <`, `<=`, `!!`, ` !`, ` %`, ` +`, ` *`, ` -`, `/`
