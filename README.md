@@ -11,6 +11,18 @@ Unsupported GraphQL keys: `==`, `===`, `!=`, `!==`, `>`, `>=`, ` <`, `<=`, `!!`,
 
 ## The Solution
 Use any of `_eq`, `_gt`, `_gte`, `_lt`, `_lte` etc from Lodash methods
+
+
+## Installation
+
+```bash
+# Yarn
+$ yarn add json-logic-js-graphql
+
+# NPM
+$ npm install json-logic-js-graphql --save
+```
+
  
 ## GraphQL 
 
@@ -31,9 +43,9 @@ mutation {
 
 >  All Lodash methods exposed with the `_` namespace to avoid overwriting the default jsonLogic's functionality 
 
-## Support for some basic date functions using momentJs 
+## Date functions using momentJs 
 
-`_gteDate`, `_gtDate`, `_lteDate`, `_ltDate`, `_eqDate`
+`_gteDate`, `_gtDate`, `_lteDate`, `_ltDate`, `_eqDate`, `_getDate`
 
 example: 
 

@@ -6,7 +6,7 @@ moment().format()
 
 lodashOperators.forEach((name) => jsonLogic.add_operation(`_${name}`, _[name]))
 
-jsonLogic.add_operation('getDate', (date) => {
+jsonLogic.add_operation('_getDate', (date) => {
   return moment(date).toISOString()
 })
 
