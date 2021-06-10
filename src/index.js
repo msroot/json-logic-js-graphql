@@ -29,5 +29,4 @@ jsonLogic.add_operation('_eqDate', (a, b) => {
   return moment(a[1]).diff(a[0], b[1]) === b[0]
 })
 
-export { jsonLogic }
- 
+export default jsonLogic
