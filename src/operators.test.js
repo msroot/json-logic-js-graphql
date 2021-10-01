@@ -2,6 +2,15 @@ import { expect } from 'chai'
 import { jsonLogic } from './index.js'
 import { describe, it } from 'mocha'
 
+describe('Custom operators', () => {
+  describe('Custom', () => {
+    it('nonZeroMin', () => {
+      const logic = { _nonZeroMin: [[100, 0, 30]] }
+      expect(jsonLogic.apply(logic)).to.be.equal(30)
+    })
+  })
+})
+
 describe('Moment operators', () => {
   describe('Dates', () => {
     it('_gteDate', () => {

@@ -29,4 +29,8 @@ jsonLogic.add_operation('_eqDate', (a, b) => {
   return moment(a[1]).diff(a[0], b[1]) === b[0]
 })
 
+jsonLogic.add_operation('_nonZeroMin', (a) => {
+  return _.min(_.without(a, 0))
+})
+
 export { jsonLogic }
