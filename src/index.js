@@ -6,6 +6,14 @@ moment().format()
 
 lodashOperators.forEach((name) => jsonLogic.add_operation(`_${name}`, _[name]))
 
+jsonLogic.add_operation('_isPastDate', (date) => {
+  return moment(date).unix() < moment().unix()
+})
+
+jsonLogic.add_operation('_isFutureDate', (date) => {
+  return moment(date).unix() > moment().unix()
+})
+
 jsonLogic.add_operation('_getDate', (date) => {
   return moment(date).toISOString()
 })

@@ -13,6 +13,30 @@ describe('Custom operators', () => {
 
 describe('Moment operators', () => {
   describe('Dates', () => {
+	  
+      it('_isPastDate', () => {
+        const rules = {
+          _isPastDate: [
+            { var: 'date' },
+          ],
+        }
+        const data = { date: '2020-10-01' }
+
+        expect(jsonLogic.apply(rules, data)).to.be.equal(true)
+      })
+	  
+      it('_isFutureDate', () => {
+        const rules = {
+          _isFutureDate: [
+            { var: 'date' },
+          ],
+        }
+        const data = { date: '2080-10-01' }
+
+        expect(jsonLogic.apply(rules, data)).to.be.equal(true)
+      })
+	  
+	  
     it('_gteDate', () => {
       const rules = {
         _gteDate: [
