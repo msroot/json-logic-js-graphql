@@ -9,7 +9,7 @@ describe('Custom operators', () => {
       expect(jsonLogic.apply(logic)).to.be.equal(30)
     })
 
-    it('nonZeroMan', () => {
+    it('nonZeroMax', () => {
       const logic = { _nonZeroMax: [[100, 0, 30]] }
       expect(jsonLogic.apply(logic)).to.be.equal(100)
     })
