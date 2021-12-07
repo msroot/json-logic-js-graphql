@@ -8,6 +8,11 @@ describe('Custom operators', () => {
       const logic = { _nonZeroMin: [[100, 0, 30]] }
       expect(jsonLogic.apply(logic)).to.be.equal(30)
     })
+
+    it('nonZeroMan', () => {
+      const logic = { _nonZeroMax: [[100, 0, 30]] }
+      expect(jsonLogic.apply(logic)).to.be.equal(100)
+    })
   })
 })
 
