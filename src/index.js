@@ -45,4 +45,8 @@ jsonLogic.add_operation('_nonZeroMax', (a) => {
   return _.max(_.without(a, 0))
 })
 
+jsonLogic.add_operation('_neq', (a, b) => {
+  return !_.eq(a, b)
+})
+
 export { jsonLogic }

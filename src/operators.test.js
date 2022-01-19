@@ -118,17 +118,24 @@ describe('Lodash operators', () => {
   describe('Lang', () => {
     it('isEqual', () => {
       const logicTrue = {
-        _isEqual: [
-          [2, 3],
-          [2, 3],
-        ],
+        _isEqual: [1, 1],
       }
       const logicFalse = {
-        _isEqual: [
-          [2, 3],
-          [2, 4],
-        ],
+        _isEqual: ['foo', 'bar'],
       }
+      expect(jsonLogic.apply(logicTrue)).to.be.equal(true)
+      expect(jsonLogic.apply(logicFalse)).to.be.equal(false)
+    })
+
+    it('_neq', () => {
+      const logicTrue = {
+        _neq: ['foo', 'bar'],
+      }
+
+      const logicFalse = {
+        _neq: [1, 1],
+      }
+
       expect(jsonLogic.apply(logicTrue)).to.be.equal(true)
       expect(jsonLogic.apply(logicFalse)).to.be.equal(false)
     })
