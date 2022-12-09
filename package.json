@@ -4,8 +4,8 @@
   "description": "Graphql query support for json-logic-js using Lodash methods",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "pnpm build && jest",
-    "build": "babel ./src/ --out-dir ./lib/",
+    "test": "jest",
+    "build": "tsc",
     "watch": "babel -w ./src/ --out-dir ./lib/",
     "prettier": "prettier --config ./.prettierrc.js --write \"**/*.js\"",
     "lint": "pnpm prettier --write --check --config ./.prettierrc.js \"**/*.js\" && eslint --fix ./src"
@@ -31,8 +31,7 @@
   "dependencies": {
     "date-fns": "2.29.3",
     "json-logic-js": "2.0.2",
-    "lodash": "4.17.21",
-    "set-value": "4.1.0"
+    "lodash": "4.17.21"
   },
   "devDependencies": {
     "@babel/cli": "7.19.3",

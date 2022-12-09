@@ -1,8 +1,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "rootDir": ".",
-    "sourceMap": true,
+    "rootDir": "src",
+    "sourceMap": false,
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
@@ -20,6 +20,8 @@
     "noUnusedParameters": true,
     "baseUrl": ".",
     "strictNullChecks": true,
+    "outDir": "lib"
   },
+  "include": ["./src/*"],
   "exclude": ["node_modules", "lib"],
 }
