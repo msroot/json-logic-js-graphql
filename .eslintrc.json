@@ -1,0 +1,66 @@
+{
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": ["prettier"],
+  "parser": "@typescript-eslint/parser",
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": [
+        "eslint:recommended",
+        "plugin:import/recommended",
+        "plugin:prettier/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/eslint-recommended"
+      ],
+      "rules": {
+        "import/named": "off",
+        "max-lines": "error",
+        "no-console": "error",
+        "prettier/prettier": "error",
+        "import/no-unresolved": "off",
+        "import/no-cycle": "error",
+        "@typescript-eslint/no-magic-numbers": [
+          "error",
+          {
+            "ignoreEnums": true,
+            "ignoreNumericLiteralTypes": true,
+            "ignoreReadonlyClassProperties": true,
+            "ignoreArrayIndexes": true,
+            "ignoreTypeIndexes": true,
+            "ignore": [-1, 0, 1]
+          }
+        ],
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/ban-ts-comment": "error",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-unused-vars": "error",
+        "@typescript-eslint/consistent-type-imports": "error",
+        "jsx-a11y/anchor-is-valid": "off",
+        "curly": "error",
+        "import/no-anonymous-default-export": "off",
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              "builtin",
+              "external",
+              "internal",
+              ["parent", "sibling", "index"]
+            ],
+            "newlines-between": "always"
+          }
+        ],
+        "import/newline-after-import": "error",
+        "import/no-named-as-default": "error",
+        "sort-imports": [
+          "error",
+          {
+            "ignoreCase": true,
+            "ignoreDeclarationSort": true
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -3,3 +3,5 @@ tests/*.json
 yarn-error.log
 yarn.lock
 .DS_Store
+.idea
+
