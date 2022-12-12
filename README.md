@@ -82,7 +82,7 @@ jsonLogic.apply(rules, data)
 Can be found  [here:](https://github.com/msroot/json-logic-js-graphql/blob/main/src/operators.js#L5)
 
 ## Tests
-Install dependencies with `yarn install` and then run the tests `yarn test`
+Install dependencies with `pnpm install` and then run the tests `pnpm test`
 
 ## Inpired
 Inpired from  [formio](https://github.com/formio/formio.js) utils
